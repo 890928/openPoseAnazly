@@ -1,0 +1,1242 @@
+/* 改 */
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Poppins;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: Poppins;
+    font-size: 16px;
+}
+
+
+/* 改 start */
+
+.wrapper {
+    width: 100%;
+    height: 100vh;
+    overflow: auto;
+    position: absolute;
+    z-index: 0;
+}
+
+.wrapper::-webkit-scrollbar {
+    width: 4px;
+}
+
+.wrapper::-webkit-scrollbar-thumb {
+    background-color: #d7d7d7;
+    border-radius: 10px;
+    height: 4px;
+}
+
+
+/* 改 end */
+
+header button {
+    font-size: 16px;
+}
+
+header input {
+    font-size: 16px;
+}
+
+header select {
+    font-size: 16px;
+}
+
+
+/* 標題列 */
+
+header {
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 60px;
+    z-index: 5;
+    letter-spacing: 5px;
+    background-color: #3A445D;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    height: 100%;
+}
+
+.left_side {
+    display: flex;
+    width: 70%;
+    height: 55px;
+}
+
+.logo {
+    width: 150px;
+    height: 50px;
+    margin-top: 2px;
+    cursor: pointer;
+}
+
+.logo img {
+    width: 100%;
+    height: 100%;
+}
+
+.detection_feedback {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 85%;
+    height: 55px;
+    padding-left: 60px;
+    font-size: 18px;
+    color: #f7f7f7;
+}
+
+.detection_feedback p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 140px;
+    height: 100%;
+    cursor: pointer;
+}
+
+nav p:hover {
+    font-weight: 600;
+    font-size: 20px;
+    color: white;
+}
+
+.right_side {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    width: 30%;
+    height: 55px;
+}
+
+.right_side p {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.select {
+    display: none;
+}
+
+.menu {
+    display: none;
+}
+
+.right_side p {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 75px;
+    height: 100%;
+    margin-left: 15px;
+    font-size: 18px;
+    cursor: pointer;
+    color: #f7f7f7;
+}
+
+.user_information {
+    display: flex;
+    align-items: center;
+    width: 150px;
+    height: 100%;
+    margin-right: 15px;
+    cursor: pointer;
+}
+
+.user_name {
+    font-size: 16px;
+    letter-spacing: 2px;
+    margin-left: 10px;
+    color: white;
+}
+
+.photo {
+    display: flex;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.photo img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.other {
+    display: flex;
+    align-items: center;
+    width: 15px;
+    cursor: pointer;
+}
+
+.other img {
+    width: 100%;
+}
+
+header ul {
+    position: absolute;
+    display: none;
+    color: black;
+    top: 50px;
+    right: 0;
+    width: 140px;
+    list-style: none;
+    background-color: #3A445D;
+}
+
+header li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    color: white;
+    font-size: 16px;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+    color: black;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 17.5px;
+    left: -100px;
+    width: 140px;
+    height: 60px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    padding: 20px 0;
+    background-color: #3A445D;
+}
+
+.dropdown-content span {
+    display: flex;
+    align-items: center;
+    width: 125px;
+    height: 40px;
+    font-size: 18px;
+    cursor: pointer;
+    color: #f7f7f7;
+    text-decoration: none;
+    padding-left: 15px;
+}
+
+.dropdown-content span:hover,
+header li:hover {
+    background-color: #57668c;
+}
+
+.dropdown:hover .dropdown-content,
+.dropdown:active .dropdown-content,
+.select:hover .list_content,
+.select:active .list_content {
+    display: block;
+}
+
+
+/* 內容 */
+
+#content {
+    margin-top: 80px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0 5px;
+}
+
+#title {
+    width: 80%;
+    height: 100px;
+    display: flex;
+    border-bottom: #C4C4C4 solid 3px;
+}
+
+#title_Left {
+    width: 65%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+#title_LeftImg {
+    width: 10%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    margin-right: 30px;
+}
+
+#title_LeftImg img {
+    width: 100%;
+}
+
+#title_Left b {
+    font-size: 48px;
+}
+
+#title_Right {
+    width: 35%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+#title_Right button {
+    height: 50px;
+    width: 150px;
+    background-color: #3A445D;
+    color: white;
+    border: 0px;
+    border-radius: 5px;
+    margin-left: 20px;
+    font-size: 18px;
+    box-shadow: 3px 3px 3px 0px rgb(139, 138, 138);
+    cursor: pointer;
+}
+
+#analyze_chart_disease {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+#analyze {
+    margin-top: 60px;
+    width: 80%;
+    height: auto;
+    display: flex;
+    align-items: center;
+}
+
+#chart {
+    width: 100%;
+    height: auto;
+}
+
+#picture_button {
+    width: 80%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+#picture_button button {
+    height: 50px;
+    width: 150px;
+    background-color: #3A445D;
+    color: white;
+    border: 0px;
+    border-radius: 5px;
+    margin-left: 20px;
+    font-size: 18px;
+    box-shadow: 3px 3px 3px 0px rgb(139, 138, 138);
+    cursor: pointer;
+}
+
+#disease {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#disease_title {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+#disease_content {
+    font-size: 16px;
+    line-height: 36px;
+    margin-bottom: 20px;
+}
+
+#analyze_UserPicture {
+    width: 80%;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+}
+
+#User_Total {
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+#User_Left {
+    width: 30%;
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+
+#color_left
+{
+    width: 30%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+#color_right{
+    width: 30%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.user_color {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.user_color span {
+    margin-left: 5px;
+    font-size: 18px;
+}
+
+#elbow_color {
+    width: 20px;
+    height: 20px;
+    border: RGB(255, 184, 0) 5px solid;
+    border-radius: 50%;
+}
+
+#waist_color {
+    width: 20px;
+    height: 20px;
+    border: RGB(255, 18, 0) 5px solid;
+    border-radius: 50%;
+}
+
+#neck_color {
+    width: 20px;
+    height: 20px;
+    border: RGB(0, 177, 64) 5px solid;
+    border-radius: 50%;
+}
+
+#knee_color {
+    width: 20px;
+    height: 20px;
+    border: RGB(0, 125, 204) 5px solid;
+    border-radius: 50%;
+}
+
+#User_content {
+    width: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 10px;
+}
+
+#User_Title {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+}
+
+#User_CheckBox {
+    margin-top: 20px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+}
+
+#User_CheckBox input {
+    width: 20px;
+    height: 20px;
+    margin: 0 10px;
+}
+
+#User_Right {
+    width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-top: 20px;
+}
+
+#user_color_hidden {
+    width: 50%;
+    display: none;
+    height: 100%;
+}
+
+.user_color_hidden_2 {
+    width: 17%;
+    display: flex;
+    align-items: center;
+}
+
+.user_color_hidden_2 span {
+    font-size: 12px;
+}
+
+#elbow_color_hidden {
+    width: 15px;
+    height: 15px;
+    border: RGB(255, 184, 0) 3px solid;
+    border-radius: 50%;
+}
+
+#waist_color_hidden {
+    width: 15px;
+    height: 15px;
+    border: RGB(255, 18, 0) 3px solid;
+    border-radius: 50%;
+}
+
+#neck_color_hidden {
+    width: 15px;
+    height: 15px;
+    border: RGB(0, 177, 64) 3px solid;
+    border-radius: 50%;
+}
+
+#knee_color_hidden {
+    width: 15px;
+    height: 15px;
+    border: RGB(0, 125, 204) 3px solid;
+    border-radius: 50%;
+}
+
+#selectdate {
+    width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+#selectdatetime {
+    font-size: 18px;
+    width: 200px;
+}
+
+#Picture {
+    width: 100%;
+    height: 75%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+#Picture img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+#ErrorMessage {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+    font-size: 24px;
+    color: white;
+    background-color: red;
+}
+
+#Analyze_Button {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+#BackAnalyze {
+    width: 50%;
+    display: flex;
+    align-items: center;
+}
+
+#Analyze_Button button {
+    height: 50px;
+    width: 150px;
+    background-color: #3A445D;
+    color: white;
+    border: 0px;
+    border-radius: 5px;
+    font-size: 18px;
+    box-shadow: 3px 3px 3px 0px rgb(139, 138, 138);
+    cursor: pointer;
+}
+
+#Poseillustrate {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+/* 彈跳視窗訊息 */
+/* 修改密碼訊息 */
+
+#Message-container {
+    position: fixed;
+    z-index: 6;
+    display: none;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+#Message-pop {
+    width: 400px;
+    height: 120px;
+    box-shadow: 0 2px 6px rgb(91, 91, 91);
+    border-radius: 5px;
+    background-color: white;
+    margin: 6% auto;
+    overflow: visible;
+    border-radius: 20px;
+    padding: 30px 50px;
+}
+
+#Message-content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#Message_Title {
+    width: 100%;
+    color: black;
+    display: flex;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+#Message_true {
+    width: 80px;
+    height: 40px;
+    border-radius: 10px;
+    font-size: 20px;
+    border: 0;
+    color: rgb(255, 255, 255);
+    background-color: rgb(19, 117, 253);
+    cursor: pointer;
+}
+
+
+/* RWD */
+@media (max-width: 1200px) {
+    #title_Left b {
+        font-size: 44px;
+    }
+}
+@media (max-width: 1120px) {
+    .user_color{
+        margin-top: 5px;
+    }
+    #color_left
+    {
+        width: 30%;
+    }
+    #User_Title{
+        font-size: 26px;
+    }
+}
+@media (max-width: 992px)
+{
+    body {
+        font-size: 14px;
+    }
+    .detection_feedback {
+        margin-left: -20px;
+    }
+    .detection_feedback p {
+        width: 120px;
+    }
+    .right_side p {
+        width: 60px;
+    }
+    #title_Right button {
+        height: 45px;
+        width: 140px;
+    }
+    #picture_button button{
+        height: 45px;
+        width: 140px;
+    }
+    #Analyze_Button button{
+        height: 45px;
+        width: 140px;
+    }
+    #title_Left b {
+        font-size: 40px;
+    }
+    #title {
+        height: 80px;
+    }
+    .user_color span
+    {
+        font-size: 16px;
+    }
+    #User_CheckBox
+    {
+        margin-top: 10px;
+        font-size: 16px;
+    }
+    #User_CheckBox
+    {
+        font-size: 16px;
+    }
+    #User_CheckBox input
+    {
+        width:15px;
+        height: 15px;
+        margin:0 5px;
+    }
+    #selectdatetime{
+        font-size: 16px;
+    }
+    #User_Title{
+        font-size: 24px;
+    }
+    #ErrorMessage
+    {
+        font-size: 22px;
+    }
+    #elbow_color
+    {
+        width: 15px;
+        height: 15px;
+        border: RGB(255,184,0) 3px solid;
+    }
+    #waist_color
+    {
+        width: 15px;
+        height: 15px;
+        border: RGB(255,18,0) 3px solid;
+    }
+    #neck_color
+    {
+        width: 15px;
+        height: 15px;
+        border: RGB(0,177,64) 3px solid;
+    }
+    #knee_color
+    {
+        width: 15px;
+        height: 15px;
+        border: RGB(0,125,204) 3px solid;
+    }
+    #Message-pop {
+        width: 300px;
+    }
+    #Message_true {
+        width: 70px;
+        height: 30px;
+        font-size: 16px;
+    }
+}
+@media (max-width:961px) {
+    /*start*/
+    .detection_feedback {
+        margin-left: -15px;
+    }
+    /*end*/
+    .item_detail {
+        width: 78%;
+    }
+    .item_img {
+        width: 45%;
+    }
+}
+@media (max-width: 940px)
+{
+    #title_Left b {
+        font-size: 36px;
+    }
+}
+@media (max-width:871px) {
+    /*start*/
+    .logo {
+        height: 45px;
+        margin-top: 5px;
+    }
+    .left_side {
+        width: 55%;
+    }
+    /*end*/
+}
+@media (max-width: 860px)
+{
+    #title_Left b {
+        font-size: 34px;
+    }
+    #color_left
+    {
+        width: 35%;
+    }
+    #selectdatetime{
+        font-size: 12px;
+        width: 135px;
+    }
+}
+@media (max-width:831px) {
+    /*start*/
+    .logo {
+        height: 38px;
+    }
+    /*end*/
+}
+@media (max-width: 820px)
+{
+    #title_Left b {
+        font-size: 32px;
+    }
+    #color_left
+    {
+        width: 40%;
+    }
+    #color_right{
+        width: 40%;
+    }
+}
+@media (max-width: 768px)
+{
+    nav {
+        display: flex;
+        justify-content: space-between;
+        width: 95%;
+    }
+    .detection_feedback {
+        padding-left: 40px;
+    }
+    .detection_feedback p {
+        width: 110px;
+        font-size: 16px;
+    }
+    .right_side {
+        width: 18%;
+    }
+    .right_side p {
+        width: 90px;
+        font-size: 16px;
+    }
+    .detection_feedback p:hover,
+    .right_side p:hover {
+        font-size: 18px;
+        color: white;
+    }
+    #title_Right button {
+        height: 40px;
+        width: 120px;
+        font-size: 16px;
+    }
+    #picture_button button{
+        height: 40px;
+        width: 120px;
+        font-size: 16px;
+    }
+
+    #Analyze_Button button{
+        height: 40px;
+        width: 120px;
+        font-size: 16px;
+    }
+    #title_Left b {
+        font-size: 30px;
+    }
+    #disease_title{
+        font-size: 20px;
+    }
+    #disease_content{
+        font-size: 16px;
+    }
+    #title {
+        height: 60px;
+    }
+    #title_LeftImg{
+        width: 13%;
+        margin-right: 20px;
+    }
+    #color_left
+    {
+        width: 40%;
+    }
+    #User_CheckBox
+    {
+        font-size: 14px;
+    }
+    #User_CheckBox input
+    {
+        width:13px;
+        height: 13px;
+        margin:0 5px;
+    }
+    .user_color span
+    {
+        font-size: 14px;
+    }
+    #User_Title{
+        font-size: 22px;
+    }
+    #ErrorMessage
+    {
+        font-size: 20px;
+    }
+}
+@media (max-width:667px) {
+    /*start*/
+    .logo {
+        width: 104px;
+    }
+    .detection_feedback,
+    .right_side {
+        display: none;
+    }
+    .select {
+        display: flex;
+    }
+    .menu {
+        display: flex;
+        width: 25px;
+        cursor: pointer;
+    }
+    .close {
+        display: none;
+        width: 25px;
+        cursor: pointer;
+    }
+    .menu img,
+    .close img {
+        width: 100%;
+    }
+}
+@media (max-width: 660px)
+{
+    #title_Left b {
+        font-size: 28px;
+    }
+    #title_LeftImg{
+        width: 13%;
+        margin-right: 15px;
+    }
+    #User_Title{
+        font-size: 20px;
+    }
+    #ErrorMessage
+    {
+        font-size: 18px;
+    }
+    #User_CheckBox input
+    {
+        width:13px;
+        height: 13px;
+        margin:0 3px;
+    }
+    #color_left
+    {
+        width: 45%;
+    }
+
+}
+@media (max-width: 633px){
+    #User_Total{
+        flex-direction: column;
+    }
+    #User_Left
+    {
+        display: none;
+    }
+
+    #User_content
+    {
+        width: 100%;
+    }
+    #User_Right
+    {
+        width: 100%;
+        display: flex;
+        align-items: flex-start;
+        margin-top: 10px;
+    }
+    #user_color_hidden{
+        width: 55%;
+        height: 100%;
+        display: flex;
+        align-items: flex-start;
+    }
+    #selectdate{
+        width: 45%;
+        height: 100%;
+        align-items: flex-start;
+    }
+    #User_CheckBox
+    {
+        font-size: 12px;
+    }
+    .user_color_hidden_2{
+        width: 19%;
+    }
+    #elbow_color_hidden
+    {
+        width: 10px;
+        height: 10px;
+        border: RGB(255,184,0) 2px solid;
+    }
+    #waist_color_hidden
+    {
+        width: 10px;
+        height: 10px;
+        border: RGB(255,18,0) 2px solid;
+    }
+    #neck_color_hidden
+    {
+        width: 10px;
+        height: 10px;
+        border: RGB(0,177,64)  2px solid;
+    }
+    #knee_color_hidden
+    {
+        width: 10px;
+        height: 10px;
+        border: RGB(0,125,204) 2px solid;
+    }
+}   
+@media (max-width: 576px)
+{
+    header {
+        height: 50px;
+    }
+    .logo {
+        width: 110px;
+    }
+    .content {
+        margin-top: 50px;
+    }
+    .home_page {
+        height: 320px;
+    }
+    .detection_feedback,
+    .right_side {
+        display: none;
+    }
+    .select {
+        display: flex;
+    }
+    .menu {
+        display: flex;
+        width: 25px;
+        cursor: pointer;
+    }
+    .close {
+        display: none;
+        width: 25px;
+        cursor: pointer;
+    }
+    .menu img,
+    .close img {
+        width: 100%;
+    }
+    #title_Left b {
+        font-size: 26px;
+    }
+    #title_LeftImg{
+        width: 15%;
+        margin-right: 15px;
+    }
+    #title_Right button {
+        height: 35px;
+        width: 100px;
+        font-size: 14px;
+    }
+    #picture_button button{
+        height: 35px;
+        width: 100px;
+        font-size: 14px;
+    }
+    #Analyze_Button button{
+        height: 35px;
+        width: 100px;
+        font-size: 14px;
+    }
+    #disease_title{
+        font-size: 18px;
+    }
+    #disease_content{
+        font-size: 14px;
+    }
+    #User_Title{
+        font-size: 18px;
+    }
+    #ErrorMessage
+    {
+        font-size: 16px;
+    }
+    #Message-pop {
+        width: 250px;
+        height: 100px;
+        padding: 20px 25px;
+    }
+    #Message_Title {
+        font-size: 16px;
+    }
+    #Message_true {
+        width: 65px;
+        height: 25px;
+        font-size: 14px;
+    }
+}
+@media (max-width: 516px){
+    #User_Title{
+        font-size: 16px;
+    }
+    #ErrorMessage
+    {
+        font-size: 14px;
+    }
+    .user_color_hidden_2{
+        width: 21%;
+    }
+}
+@media (max-width: 471px)
+{
+    #title_Left b {
+        font-size: 24px;
+    }
+    #title_LeftImg{
+        width: 15%;
+        margin-right: 10px;
+    }
+    #title_Right button {
+        height: 35px;
+        width: 90px;
+        font-size: 14px;
+    }
+    #picture_button button{
+        height: 35px;
+        width: 90px;
+        font-size: 14px;
+    }
+    #Analyze_Button button{
+        height: 35px;
+        width: 90px;
+        font-size: 14px;
+    }
+    #disease_title{
+        font-size: 16px;
+    }
+    .user_color_hidden_2{
+        width: 25%;
+    }
+}
+@media (max-width:426px) {
+    .logo {
+        width: 104px;
+    }
+}
+@media (max-width: 375px)
+{
+    header {
+        height: 50px;
+    }
+    .logo {
+        width: 110px;
+    }
+    .content {
+        margin-top: 50px;
+    }
+    .home_page {
+        height: 300px;
+    }
+    #desktop {
+        height: 200px;
+    }
+    #title_Left b {
+        font-size: 22px;
+    }
+    #title_LeftImg{
+        width: 15%;
+        margin-right: 5px;
+    }
+    #title_Right button {
+        height: 30px;
+        width: 70px;
+        font-size: 12px;
+    }
+    #picture_button button{
+        height: 30px;
+        width: 70px;
+        font-size: 12px;
+    }
+    #Analyze_Button button{
+        height: 30px;
+        width: 70px;
+        font-size: 12px;
+    }
+    #disease_title{
+        font-size: 14px;
+    }
+    #disease_content{
+        font-size: 12px;
+    }
+    #ErrorMessage
+    {
+        font-size: 14px;
+    }
+    #Message-pop {
+        width: 200px;
+        height: 80px;
+        border-radius: 2px;
+    }
+    #Message_Title {
+        font-size: 14px;
+    }
+    #Message_true {
+        width: 60px;
+        height: 20px;
+        font-size: 12px;
+        border-radius: 2px;
+        letter-spacing: 0px;
+    }
+}

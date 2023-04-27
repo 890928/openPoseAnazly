@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link type="text/css" rel="styleSheet" href="./css/Analyze.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js"
+    integrity="sha512-d9xgZrVZpmmQlfonhQUvTR7lMPtO7NkZMkA0ABN3PHCbKA5nqylQ/yWlFAyY6hYgdF1Qh6nYiuADWwKB4C2WSw=="
+    crossorigin="anonymous"></script>
+    <title>坐姿分析</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <header>
+            <nav>
+                <div class="left_side">
+                    <div class="logo" id="logo">
+                        <img src="Image/logo.png">
+                    </div>
+                    <div class="detection_feedback" id="detection_feedback">
+                        <p id="detection">坐姿檢測</p>
+                        <p id="feedback">系統回饋</p>
+                    </div>
+                </div>
+                <div class="right_side" id="right_side">
+                    <p id="login">登入</p>
+                    <p id="register">註冊</p>
+                </div>
+                <div class="select">
+                    <div class="menu" id="menu">
+                        <img src="Image/menu.png">
+                    </div>
+                    <div class="close" id="close">
+                        <img src="Image/close.png">
+                    </div>
+                    <ul class="list" id="list">
+                        <li id="list_detection">坐姿檢測</li>
+                        <li id="list_feedback">系統回饋</li>
+                        <li id="list_login">登入</li>
+                        <li id="list_register">註冊</li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <div id="content">
+            <div id="title">
+                <div id="title_Left">
+                    <div id="title_LeftImg">
+                        <img src="./Image/PoseAnalyze_icon.png">
+                    </div>
+                    <b>坐姿分析</b>
+                </div>
+                <div id="title_Right">
+                    <button id="GoHistory">歷程記錄</button>
+                </div>
+            </div>
+            <div id="analyze_chart_disease">
+                <div id="analyze">
+                    <div id="chart">
+                        <canvas id="chartRadar" width="200" height="100"></canvas>
+                    </div>
+                </div>
+                <div id="picture_button">
+                    <button id="gopicture">查看圖片</button>
+                </div>
+                <div id="disease">
+                    <div id="disease_title">
+                        <b>對 身 體 的 危 害</b>
+                    </div>
+                    <div id="disease_content">
+                        <ul>
+                            <li><p><b>脊椎失去彈性-腰部</b></p>
+                                久坐加上姿勢不良會讓脊椎骨中間的軟骨無法平均受力，長時間擠壓導致肌腱、韌帶周邊的膠原蛋白硬化，使脊椎失去彈性，進而引發脊椎傷害。
+                            </li>
+                            <li><p><b>腕隧道症候群-手肘</b></p>
+                                又稱為腕溝症候群，即手肘長時間靠在桌面或堅硬的地方，並對手肘施加壓力，像長時間打電腦、打麻將過久，都會壓迫到尺神經，造成腕隧道症候群。
+                            </li>
+                            <li><p><b>上交叉症候群-脖子</b></p>
+                                上交叉症候群是指頭部跨越了身體的中線，頸椎下方過度彎曲、上方過度伸直，變得好像「烏龜」一樣往前伸出脖子，而且背部的上斜方肌、肩胛骨上方會特別突出，像是駝背一樣；而下斜方肌、頸椎的肌肉沒有力氣，會凹下去，所以形成烏龜頸、駝背。
+                            </li>
+                            <li><p><b>膝關節炎-膝蓋</b></p>
+                                長期姿勢不良，負重用力，體重過重，導致膝部軟組織損傷，關節微小移位，均會加重關節變性，磨損與破壞。
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div id="analyze_UserPicture">
+                <div id="User_Total">
+                    <div id="User_Left">
+                        <div id="color_left">
+                            <div class="user_color">
+                                <div id="elbow_color"></div>
+                                <span>手肘</span>
+                            </div>
+                            <div class="user_color">
+                                <div id="waist_color"></div>
+                                <span>腰部</span>
+                            </div>
+                        </div>
+                        <div id="color_right">
+                            <div class="user_color">
+                                <div id="neck_color"></div>
+                                <span>脖子</span>
+                            </div>
+                            <div class="user_color">
+                                <div id="knee_color"></div>
+                                <span>膝蓋</span>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div id="User_content">
+                        <div id="User_Title">
+                            <b>分 析 部 位</b>
+                        </div>
+                        <div id="User_CheckBox">
+                            <input type="checkbox" id="elbow" value="elbow" onclick="checkboxelbow()">
+                            <label for="waist">手肘</label>
+                            <input type="checkbox" id="waist" value="waist" onclick="checkboxwaist()">
+                            <label for="elbow">腰部</label>
+                            <input type="checkbox" id="neck" value="neck" onclick="checkboxneck()">
+                            <label for="neck">脖子</label>
+                            <input type="checkbox" id="knee" value="knee" onclick="checkboxknee()">
+                            <label for="knee">膝蓋</label>
+                        </div>
+                    </div>
+                    <div id="User_Right">
+                        <div id="user_color_hidden">
+                            <div class="user_color_hidden_2">
+                                <div id="elbow_color_hidden"></div>
+                                <span>手肘</span>
+                            </div>
+                            <div class="user_color_hidden_2">
+                                <div id="waist_color_hidden"></div>
+                                <span>膝蓋</span>
+                            </div>
+                            <div class="user_color_hidden_2">
+                                <div id="neck_color_hidden"></div>
+                                <span>脖子</span>
+                            </div>
+                            <div class="user_color_hidden_2">
+                                <div id="knee_color_hidden"></div>
+                                <span>膝蓋</span>
+                            </div>
+                        </div>
+                        <div id="selectdate">
+                            <select id="selectdatetime" onchange="selectchange()">
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div id="Picture">
+                </div>
+                <div id="ErrorMessage">
+                </div>
+                <div id="Analyze_Button">
+                    <div id="BackAnalyze">
+                        <button id="goAnalyze">返回分析</button>
+                    </div>
+                    <div id="Poseillustrate">
+                        <button id="goillustrate">評分說明</button>
+                    </div>
+                </div>
+
+            </div>
+            <div id="Message-container">
+                <div id="Message-pop">
+                    <div id="Message-content">
+                        <div id="Message_Title"></div>
+                            <button id="Message_true">確定</button>
+                        </div>
+                    </div>
+                </div>
+            </div>  
+        </div>
+    </div>
+    <div id="w" style="display: none;"></div>
+    <div id="e" style="display: none;"></div>
+    <div id="n" style="display: none;"></div>
+    <div id="k" style="display: none;"></div>
+    <script src="./js/Analyze.js"></script>
+</body>
+
+</html>

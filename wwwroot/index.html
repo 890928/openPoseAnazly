@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/index.css" rel="stylesheet">
+    <link href="#" rel="shortcut icon">
+    <title>Index</title>
+</head>
+
+<body>
+    <dialog></dialog>
+    <div class="wrapper" id="wrapper">
+        <header>
+            <nav>
+                <div class="left_side">
+                    <div class="logo" id="logo">
+                        <img src="Image/logo.png">
+                    </div>
+                    <div class="detection_feedback" id="detection_feedback">
+                        <p id="detection">坐姿檢測</p>
+                        <p id="feedback">系統回饋</p>
+                    </div>
+                </div>
+                <div class="right_side" id="right_side">
+                    <p id="login">登入</p>
+                    <p id="register">註冊</p>
+                </div>
+                <div class="select">
+                    <div class="menu" id="menu">
+                        <img src="Image/menu.png">
+                    </div>
+                    <div class="close" id="close">
+                        <img src="Image/close.png">
+                    </div>
+                    <ul class="list" id="list">
+                        <li id="list_detection">坐姿檢測</li>
+                        <li id="list_feedback">系統回饋</li>
+                        <li id="list_login">登入</li>
+                        <li id="list_register">註冊</li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <div class="content">
+            <div class="home_page">
+                <img src="Image/homepage.jpg" id="desktop">
+                <div class="about" id="about">
+                    <div class="about_detail" id="about_detail">
+                        <p class="about_title">關於我們</p>
+                        <br>
+                        <p class="about_content" id="about_content">在這個科技發展進步的時代， 人們在辦公室時常一坐就是超過10個小時的連續工作， 長時間坐姿不良，彎腰駝背、翹腳、身體歪一邊，不只會影響體態的端正與否， 還會導致肺部無法伸展，讓身體得到充足的氧氣。 伴隨而來的是血液循環不良、 注意力無法集中，工作效率也會跟著變差。本團隊注意到了上述問題，開發了一套坐姿檢測系統， 參考「長庚醫療財團法人」的公開文件，利用文件中所設立的標準坐姿，比對受試者的各個關節角度， 提供受試者參考系統的判斷加以調整自身的坐姿，讓受試者保持正確的坐姿，用於減少對身體的傷害。</p>
+                    </div>
+                </div>
+            </div>
+            <div class="function">
+                <div class="item">
+                    <div class="item_detail">
+                        <div class="item_img">
+                            <img src="Image/detection.png">
+                        </div>
+                        <div class="text">
+                            <div class="text_title">即時坐姿檢測</div>
+                            <div class="text_content">
+                                <p>功能操作說明</p>
+                                <p>詳細坐姿紀錄</p>
+                            </div>
+                            <button class="item_btn" id="go_detection">
+                                <p>前往檢測</p>
+                                <div class="arrow">
+                                    <img src="Image/right-arrow.png" />
+                                </div>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="item_detail">
+                        <div class="text">
+                            <div class="text_title">改善坐姿分析</div>
+                            <div class="text_content">
+                                <p>即時分析當前坐姿</p>
+                                <p>提供適當改善建議</p>
+                            </div>
+                            <button class="item_btn" id="go_analyze">
+                                <div class="arrow">
+                                    <img src="Image/left-arrow.png" />
+                                </div>
+                                <p>前往分析</p>
+                            </button    >
+                        </div>
+                        <div class="item_img">
+                            <img src="Image/analyze.png">
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="item_detail">
+                        <div class="item_img">
+                            <img src="Image/record.png">
+                        </div>
+                        <div class="text">
+                            <div class="text_title">使用歷程記錄</div>
+                            <div class="text_content">
+                                <p>即時分析當前坐姿</p>
+                                <p>提供適當改善建議</p>
+                            </div>
+                            <button class="item_btn"  id="go_history">
+                                <p>查看紀錄</p>
+                                <div class="arrow">
+                                    <img src="Image/right-arrow.png" />
+                                </div>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="pop-up" id="popup_login">
+        <div class="login_page" id="login_page">
+            <div class="page_title" id="page_title">
+                <p>登入</p>
+            </div>
+            <div class="account">
+                <div class="icon">
+                    <img src="Image/user.png">
+                </div>
+                <input placeholder="帳號(電子信箱)" id="login_email">
+            </div>
+            <div class="password">
+                <div class="icon">
+                    <img src="Image/unlock.png">
+                </div>
+                <input placeholder="密碼" type="password" id="login_password">
+            </div>
+            <div class="login_btn" id="login_btn">
+                <button type="button">登入</button>
+            </div>
+            <div class="register_forget">
+                <p id="forget_password">忘記密碼</p>
+                <p id="register_member">註冊會員</p>
+            </div>
+        </div>
+    </div>
+    <div class="pop-up second" id="popup_register">
+        <div class="register_page">
+            <div class="page_title" id="page_title">
+                <p>註冊</p>
+            </div>
+            <div class="account">
+                <div class="icon">
+                    <img src="Image/user.png">
+                </div>
+                <input placeholder="帳號(電子信箱)" class="email" id="email">
+            </div>
+            <div class="password">
+                <div class="icon">
+                    <img src="Image/unlock.png">
+                </div>
+                <input placeholder="密碼" type="password" id="password">
+            </div>
+            <div class="password_check">
+                <div class="icon">
+                    <img src="Image/open-padlock.png">
+                </div>
+                <input placeholder="確認密碼" type="password" id="checkpassword">
+            </div>
+            <div class="register_btn" id="register_btn">
+                <button type="button">註冊</button>
+            </div>
+            <div class="go_login">
+                <p>已有帳號，點此<span id="goLogin">登入</span></p>
+            </div>
+        </div>
+    </div>
+    <div class="pop-up third" id="popup_forget">
+        <div class="forget_page">
+            <div class="page_title" id="page_title">
+                <p>請輸入Email信箱</p>
+            </div>
+            <div class="account">
+                <div class="icon">
+                    <img src="Image/open-mail.png">
+                </div>
+                <input placeholder="電子信箱" class="forget_email" id="forget_email">
+            </div>
+            <div class="register_btn" id="confirm">
+                <button type="button">確認</button>
+            </div>
+        </div>
+    </div>
+    <script src="js/index.js"></script>
+</body>
+
+</html>

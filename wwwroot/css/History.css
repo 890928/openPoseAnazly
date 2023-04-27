@@ -1,0 +1,1800 @@
+/* 改 */
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Poppins;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: Poppins;
+    font-size: 16px;
+}
+
+
+/* 改 start */
+
+.wrapper {
+    width: 100%;
+    height: 100vh;
+    overflow: auto;
+    position: absolute;
+    z-index: 0;
+}
+
+.wrapper::-webkit-scrollbar {
+    width: 4px;
+}
+
+.wrapper::-webkit-scrollbar-thumb {
+    background-color: #d7d7d7;
+    border-radius: 10px;
+    height: 4px;
+}
+
+
+/* 改 end */
+
+header button {
+    font-size: 16px;
+}
+
+header input {
+    font-size: 16px;
+}
+
+header select {
+    font-size: 16px;
+}
+
+
+/* 標題列 */
+
+header {
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 60px;
+    z-index: 5;
+    letter-spacing: 5px;
+    background-color: #3A445D;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    height: 100%;
+}
+
+.left_side {
+    display: flex;
+    width: 70%;
+    height: 55px;
+}
+
+.logo {
+    width: 150px;
+    height: 50px;
+    margin-top: 2px;
+    cursor: pointer;
+}
+
+.logo img {
+    width: 100%;
+    height: 100%;
+}
+
+.detection_feedback {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 85%;
+    height: 55px;
+    padding-left: 60px;
+    font-size: 18px;
+    color: #f7f7f7;
+}
+
+.detection_feedback p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 140px;
+    height: 100%;
+    cursor: pointer;
+}
+
+nav p:hover {
+    font-weight: 600;
+    font-size: 20px;
+    color: white;
+}
+
+.right_side {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    width: 30%;
+    height: 55px;
+}
+
+.right_side p {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.select {
+    display: none;
+}
+
+.menu {
+    display: none;
+}
+
+.right_side p {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 75px;
+    height: 100%;
+    margin-left: 15px;
+    font-size: 18px;
+    cursor: pointer;
+    color: #f7f7f7;
+}
+
+.user_information {
+    display: flex;
+    align-items: center;
+    width: 150px;
+    height: 100%;
+    margin-right: 15px;
+    cursor: pointer;
+}
+
+.user_name {
+    font-size: 16px;
+    letter-spacing: 2px;
+    margin-left: 10px;
+    color: white;
+}
+
+.photo {
+    display: flex;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.photo img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.other {
+    display: flex;
+    align-items: center;
+    width: 15px;
+    cursor: pointer;
+}
+
+.other img {
+    width: 100%;
+}
+
+header ul {
+    position: absolute;
+    display: none;
+    color: black;
+    top: 50px;
+    right: 0;
+    width: 140px;
+    list-style: none;
+    background-color: #3A445D;
+}
+
+header li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    color: white;
+    font-size: 16px;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+    color: black;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 17.5px;
+    left: -100px;
+    width: 140px;
+    height: 60px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    padding: 20px 0;
+    background-color: #3A445D;
+}
+
+.dropdown-content span {
+    display: flex;
+    align-items: center;
+    width: 125px;
+    height: 40px;
+    font-size: 18px;
+    cursor: pointer;
+    color: #f7f7f7;
+    text-decoration: none;
+    padding-left: 15px;
+}
+
+.dropdown-content span:hover,
+header li:hover {
+    background-color: #57668c;
+}
+
+.dropdown:hover .dropdown-content,
+.dropdown:active .dropdown-content,
+.select:hover .list_content,
+.select:active .list_content {
+    display: block;
+}
+
+
+/* 內容區 */
+
+#content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    margin-top: 80px;
+}
+
+#Member {
+    height: 150px;
+    width: 80%;
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+
+#MemberImage {
+    height: 100%;
+    width: 20%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    margin-right: 150px;
+}
+
+#Imgicon {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    z-index: 1;
+    border-radius: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #999999;
+    margin-bottom: -5px;
+    margin-right: 25px;
+    cursor: pointer;
+}
+
+#Imgicon img {
+    width: 50%;
+}
+
+#MemberImgbox {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+#MemberImgbox_img {
+    width: 150px;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+#MemberImgbox_img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+#MemberText {
+    height: 100%;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#Member_Name {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+}
+
+#Member_Account {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+}
+
+.Member_button {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+}
+
+.Member_button button {
+    height: 60%;
+    width: 100px;
+    background-color: #3c75c6;
+    border: 0;
+    border-radius: 10px;
+    color: white;
+    cursor: pointer;
+    margin-right: 20px;
+}
+
+#History_Title {
+    height: 50px;
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    border-bottom: solid 5px #1B365C;
+}
+
+#History_Title_Text {
+    height: 50px;
+    width: 15%;
+    background-color: #1B365C;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    color: white;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+#search {
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+    width: 80%;
+    height: 100px;
+}
+
+#datechoice {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+}
+
+#datatitle {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    font-weight: bold;
+    height: 30px;
+}
+
+#start_text {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+#end_text {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+#datacontent {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    height: 50px;
+}
+
+.date_start {
+    height: 100%;
+    width: 50%;
+    display: flex;
+    align-items: flex-end;
+}
+
+.date_start input {
+    width: 45%;
+    height: 30px;
+}
+
+#date_start {
+    margin-right: 10px;
+}
+
+.date_end {
+    height: 100%;
+    width: 50%;
+    display: flex;
+    align-items: flex-end;
+}
+
+.date_end input {
+    width: 45%;
+    height: 30px;
+}
+
+#date_end {
+    margin-right: 10px;
+}
+
+#choice {
+    width: 20%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    flex-direction: column;
+}
+
+#choice_content {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+#title_space{
+    height: 30px;
+}
+#search_select {
+    height: 30px;
+    width: 40%;
+    background-color: rgb(48, 207, 101, 0.8);
+    color: white;
+    border: 0px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+#chart_button{
+    height: 30px;
+    width: 50%;
+    background-color: rgba(68, 93, 181, 0.8);
+    color: white;
+    border: 0px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+#BadSortHidden {
+    display: none;
+}
+
+#StartTimeHidden {
+    display: none;
+}
+
+#EndTimeHidden {
+    display: none;
+}
+
+.radio {
+    display: none;
+}
+
+.table {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    width: 80%;
+    line-height: 36px;
+    padding: 0 5px;
+}
+
+.table th {
+    width: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#StartDateSort_Down {
+    height: 25px;
+    width: 25px;
+    margin-left: 5px;
+    cursor: pointer;
+    display: flex;
+}
+
+#EndDateSort_Down {
+    height: 25px;
+    width: 25px;
+    margin-left: 5px;
+    cursor: pointer;
+    display: flex;
+}
+
+#BadSort_Down {
+    height: 25px;
+    width: 25px;
+    margin-left: 5px;
+    cursor: pointer;
+    display: flex;
+}
+
+#StartDateSort_Up {
+    height: 25px;
+    width: 25px;
+    margin-left: 5px;
+    margin-bottom: 5px;
+    cursor: pointer;
+    display: flex;
+}
+
+#EndDateSort_Up {
+    height: 25px;
+    width: 25px;
+    margin-left: 5px;
+    margin-bottom: 5px;
+    cursor: pointer;
+    display: flex;
+}
+
+#BadSort_Up {
+    height: 25px;
+    width: 25px;
+    margin-left: 5px;
+    margin-bottom: 5px;
+    cursor: pointer;
+    display: flex;
+}
+
+.table img {
+    height: 100%;
+    width: 100%;
+}
+
+.table table {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    border-spacing: 0;
+    border-bottom: 2px #E1DDDD solid;
+    font-weight: bold;
+}
+
+.table_time {
+    width: 25%;
+}
+
+.table tr {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top: 2px #E1DDDD solid;
+}
+
+.table td {
+    width: 20%;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.table table tbody tr:nth-child(odd) {
+    background-color: rgb(241, 246, 253)
+}
+
+.table table tbody tr:last-child td:first-child {
+    border-radius: 0 0 0 5px;
+}
+
+.table table tbody tr:last-child td:last-child {
+    border-radius: 0 0 5px 0;
+}
+
+.table button {
+    width: 80px;
+    height: 30px;
+    background-color: hsla(191, 62%, 50%, 0.22);
+    border: 0;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.table a {
+    text-decoration: none;
+    color: black;
+}
+
+.table a:hover {
+    text-decoration: none;
+    color: black;
+}
+
+#HistoryBottom {
+    width: 80%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#page {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #FFF;
+    margin: 0px 20px;
+}
+
+.NowPage {
+    width: 30px;
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #FD5454;
+    border: 0px;
+    border-radius: 4em;
+    margin-left: 5px;
+}
+
+.OtherPage {
+    width: 30px;
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #3183CF;
+    border: 0px;
+    border-radius: 4em;
+    margin-left: 5px;
+    cursor: pointer;
+}
+
+#page a {
+    color: #FFF;
+    text-decoration-line: none;
+}
+
+#pageImgL {
+    width: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#pageImgL_img {
+    width: 80%;
+    display: none;
+    cursor: pointer;
+}
+
+#pageImgR {
+    width: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#pageImgR_img {
+    width: 80%;
+    display: none;
+    cursor: pointer;
+}
+
+#NowPageHidden {
+    display: none;
+}
+
+#MaxPageHidden {
+    display: none;
+}
+
+
+/*修改密碼*/
+
+.pop-up {
+    position: fixed;
+    top: 150px;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 410px;
+    height: 370px;
+    border-radius: 20px;
+    z-index: 4;
+    background-color: #1B365C;
+}
+
+.login_page,
+.register_page {
+    height: 100%;
+}
+
+.forget_page {
+    height: 300px;
+    padding: 25px 0;
+}
+
+.page_title {
+    width: 100%;
+    padding: 0 20px;
+    margin-top: 15px;
+}
+
+.page_title p {
+    font-size: 24px;
+    font-weight: 600;
+    padding: 10px;
+    color: white;
+}
+
+.pop-up input {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 340px;
+    height: 50px;
+    margin: 15px;
+    padding: 0 55px;
+    border-radius: 15px;
+    font-size: 16px;
+    border: none;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.pop-up input::placeholder {
+    color: white;
+    letter-spacing: 5px;
+}
+
+.pop-up input:focus {
+    outline: white 3px solid;
+}
+
+.login_btn,
+.register_btn {
+    display: flex;
+    width: 100%;
+    height: 50px;
+    margin-top: 15px;
+    padding: 0 15px;
+}
+
+.login_btn button,
+.register_btn button {
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    font-size: 18px;
+    border: none;
+    color: white;
+    letter-spacing: 15px;
+    background-color: transparent;
+    border: white 2px solid;
+    cursor: pointer;
+}
+
+.account,
+.password,
+.password_check {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin-left: 20px;
+}
+
+.password_check {
+    padding-left: -15px;
+}
+
+.icon {
+    position: relative;
+    width: 20px;
+    height: 20px;
+    margin-right: -40px;
+    z-index: 2;
+}
+
+.icon img {
+    width: 100%;
+    margin-right: -40px;
+    margin-left: 10px;
+}
+
+#Userfile {
+    display: none;
+}
+
+
+/* 刪除帳號 */
+
+#Delete-container {
+    display: none;
+    position: fixed;
+    z-index: 6;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+#Delete-pop {
+    width: 400px;
+    height: 120px;
+    box-shadow: 0 2px 6px rgb(91, 91, 91);
+    border-radius: 5px;
+    background-color: #1B365C;
+    margin: 6% auto;
+    overflow: visible;
+    border-radius: 20px;
+    padding: 30px 50px;
+}
+
+#Delete-content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#Delete_Title {
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+#Delete_button {
+    margin-top: 20px;
+}
+
+#Delete_true {
+    width: 80px;
+    height: 40px;
+    border-radius: 10px;
+    font-size: 20px;
+    border: 0;
+    color: white;
+    background-color: rgba(0, 128, 0, 0.8);
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+#Delete_false {
+    width: 80px;
+    height: 40px;
+    border-radius: 10px;
+    font-size: 20px;
+    border: 0;
+    color: white;
+    background-color: rgba(255, 0, 0, 0.8);
+    cursor: pointer;
+}
+
+#Delect_succes {
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+#Delect_succes_button {
+    margin-top: 20px;
+}
+
+#Delect_succes_button button {
+    width: 80px;
+    height: 40px;
+    border-radius: 10px;
+    font-size: 20px;
+    border: 0;
+    color: white;
+    background-color: #3c75c6;
+    cursor: pointer;
+}
+
+
+/* 修改密碼訊息 */
+
+#Message-container {
+    position: fixed;
+    z-index: 6;
+    display: none;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+#Message-pop {
+    width: 400px;
+    height: 120px;
+    box-shadow: 0 2px 6px rgb(91, 91, 91);
+    border-radius: 5px;
+    background-color: white;
+    margin: 6% auto;
+    overflow: visible;
+    border-radius: 20px;
+    padding: 30px 50px;
+}
+
+#Message-content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#Message_Title {
+    width: 100%;
+    color: black;
+    display: flex;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+#Message_true {
+    width: 80px;
+    height: 40px;
+    border-radius: 10px;
+    font-size: 20px;
+    border: 0;
+    color: rgb(255, 255, 255);
+    background-color: rgb(19, 117, 253);
+    cursor: pointer;
+}
+
+
+/* 彈跳 */
+
+
+/*修改密碼彈跳視窗*/
+
+#window-container {
+    display: none;
+    position: fixed;
+    z-index: 6;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+#window-pop {
+    width: 380px;
+    height: 340px;
+    border-radius: 20px;
+    background-color: #1B365C;
+    margin: 12% auto;
+    overflow: visible;
+    border-radius: 20px;
+    padding: 20px;
+}
+
+.window-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#window_Title {
+    width: 360px;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    display: flex;
+}
+
+.oldpassword {
+    width: 360px;
+    height: 50px;
+    margin-bottom: 20px;
+}
+
+#newpassword {
+    width: 360px;
+    height: 50px;
+    margin-bottom: 20px;
+}
+
+#checknewpassword {
+    width: 360px;
+    height: 50px;
+    margin-bottom: 20px;
+}
+
+#window-pop input {
+    width: 340px;
+    height: 100%;
+    padding: 0 10px;
+    border-radius: 10px;
+    font-size: 16px;
+    border: none;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+#password_button {
+    display: flex;
+    width: 360px;
+    height: 50px;
+    margin-bottom: 20px;
+}
+
+#window-pop input::placeholder {
+    color: white;
+    letter-spacing: 5px;
+}
+
+#window-pop input:focus {
+    outline: white 3px solid;
+}
+
+#password_button button {
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    font-size: 18px;
+    border: none;
+    color: white;
+    letter-spacing: 15px;
+    background-color: transparent;
+    border: white 2px solid;
+    cursor: pointer;
+}
+/* 圖表彈跳視窗 */
+#chart-container {
+    display: none;
+    position: fixed;
+    z-index: 6;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+#chart-pop {
+    width:70%;
+    border-radius: 5px;
+    background-color: #ffffff;
+    margin: 6% auto;
+    overflow: visible;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#chart-content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    
+}
+/*RWD*/
+
+@media (max-width: 1200px) {
+    #Imgicon {
+        margin-right: 10px;
+    }
+    #datechoice {
+        width: 75%;
+    }
+    #choice{
+        width: 25%;
+    }
+    #chart-pop {
+        width:800px;
+        height: auto;
+    }
+}
+
+@media (max-width: 992px) {
+    #window-pop {
+        width: 320px;
+        height: 300px;
+    }
+    #window_Title {
+        width: 320px;
+    }
+    .oldpassword {
+        width: 320px;
+        height: 40px;
+    }
+    #newpassword {
+        width: 320px;
+        height: 40px;
+    }
+    #checknewpassword {
+        width: 320px;
+        height: 40px;
+    }
+    #window-pop input {
+        width: 300px;
+        height: 100%;
+    }
+    #password_button {
+        width: 320px;
+        height: 40px;
+    }
+    #password_button button {
+        font-size: 16px;
+    }
+    #Delete-pop {
+        width: 300px;
+    }
+    #Delete_true {
+        width: 70px;
+        height: 30px;
+        font-size: 16px;
+    }
+    #Delete_false {
+        width: 70px;
+        height: 30px;
+        font-size: 16px;
+    }
+    #Message-pop {
+        width: 300px;
+    }
+    #Message_true {
+        width: 70px;
+        height: 30px;
+        font-size: 16px;
+    }
+    body {
+        font-size: 14px;
+    }
+    .detection_feedback {
+        margin-left: -20px;
+    }
+    .detection_feedback p {
+        width: 120px;
+    }
+    .right_side p {
+        width: 60px;
+    }
+    #Imgicon {
+        margin-right: 0px;
+    }
+    #History_Title_Text {
+        font-size: 22px;
+        width: 15%;
+    }
+    #History_Title_Text {
+        font-size: 22px;
+        width: 18%;
+    }
+    #chart-pop {
+        width:750px;
+        height: auto;
+    }
+}
+
+@media (max-width:961px) {
+    /*start*/
+    .detection_feedback {
+        margin-left: -15px;
+    }
+    /*end*/
+    .item_detail {
+        width: 78%;
+    }
+    .item_img {
+        width: 45%;
+    }
+}
+
+@media (max-width: 909px) {
+    #MemberImage {
+        width: 25%;
+        margin-right: 100px;
+    }
+    #MemberText {
+        width: 55%;
+    }
+    #MemberText {
+        font-size: 18px;
+    }
+    body {
+        font-size: 14px;
+    }
+    #History_Title_Text {
+        font-size: 20px;
+    }
+    .table button {
+        font-size: 14px;
+    }
+    .Member_button button {
+        width: 90px;
+        font-size: 14px;
+    }
+    #MemberImgbox_img {
+        width: 135px;
+        height: 135px;
+    }
+    #Imgicon {
+        width: 35px;
+        height: 35px;
+        margin-right: 10px;
+    }
+    #datechoice {
+        width: 70%;
+    }
+    #choice{
+        width: 30%;
+    }
+}
+
+@media (max-width:871px) {
+    /*start*/
+    .logo {
+        height: 45px;
+        margin-top: 5px;
+    }
+    .left_side {
+        width: 55%;
+    }
+    /*end*/
+    #chart-pop {
+        width:600px;
+        height: auto;
+    }
+}
+
+@media (max-width:831px) {
+    /*start*/
+    .logo {
+        height: 38px;
+    }
+    /*end*/
+    #search {
+        margin: 20px 0;
+        height: 90px;
+        align-items:flex-end ;
+        
+    }
+    #datatitle {
+        font-size: 16px;
+        height: 20px;
+        margin-bottom: 10px;
+    }
+    .date_start {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .date_start input {
+        width: 80%;
+        height: 30px;
+        font-size: 14px;
+
+    }
+    
+    .date_end {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .date_end input {
+        width: 80%;
+        height: 30px;
+        font-size: 14px;
+    }
+    #date_start {
+        margin-right: 0px;
+        margin-bottom: 5px;
+    }
+    #date_end {
+        margin-right: 0px;
+        margin-bottom: 5px;
+    }
+    #title_space{
+        display: none;
+    }
+    #choice_content{
+        height: 70px;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: flex-end;
+    }
+    #search_select {
+        width: 100%;
+        height: 30px;
+        font-size: 14px;
+    }
+    #chart_button{
+        width: 100%;
+        height: 30px;
+        font-size: 14px;
+        margin-top: 5px;
+    }
+
+    #datechoice{
+        width: 80%;
+        height: 90px;
+        align-items: flex-end;
+        justify-content: flex-end;
+    }
+    #choice{
+        width: 20%;
+        height: 90px;
+        align-items: flex-end;
+        justify-content: flex-end;
+    }
+}
+
+@media (max-width: 768px) {
+    nav {
+        display: flex;
+        justify-content: space-between;
+        width: 95%;
+    }
+    .detection_feedback {
+        padding-left: 40px;
+    }
+    .detection_feedback p {
+        width: 110px;
+        font-size: 16px;
+    }
+    .right_side {
+        width: 18%;
+    }
+    .right_side p {
+        width: 90px;
+        font-size: 16px;
+    }
+    .detection_feedback p:hover,
+    .right_side p:hover {
+        font-size: 18px;
+        color: white;
+    }
+    #MemberImage {
+        width: 30%;
+        margin-right: 70px;
+    }
+    #MemberText {
+        width: 50%;
+        font-size: 16px;
+    }
+    body {
+        font-size: 12px;
+    }
+    #History_Title_Text {
+        font-size: 18px;
+    }
+    .table button {
+        font-size: 12px;
+    }
+    .Member_button button {
+        width: 80px;
+        font-size: 12px;
+    }
+    #Member {
+        height: 130px;
+    }
+    #MemberImgbox_img {
+        width: 120px;
+        height: 120px;
+    }
+    #Imgicon {
+        width: 30px;
+        height: 30px;
+    }
+    #datatitle {
+        font-size: 16px;
+        height: 20px;
+    }
+    .date_start input {
+        width: 90%;
+        height: 20px;
+        font-size: 14px;
+    }
+    .date_end input {
+        width: 90%;
+        height: 20px;
+        font-size: 14px;
+    }
+    #chart-pop {
+        width:550px;
+        height: auto;
+    }
+}
+@media (max-width:682px) {
+    #datatitle {
+        font-size: 14px;
+    }
+    .date_start input {
+        font-size: 12px;
+    }
+    .date_end input {
+        font-size: 12px;
+    }
+    #search_select {
+        font-size: 12px;
+    }
+    #chart_button{
+        font-size: 12px;
+    }
+}
+@media (max-width:667px) {
+    /*start*/
+    .logo {
+        width: 104px;
+    }
+    .detection_feedback,
+    .right_side {
+        display: none;
+    }
+    .select {
+        display: flex;
+    }
+    .menu {
+        display: flex;
+        width: 25px;
+        cursor: pointer;
+    }
+    .close {
+        display: none;
+        width: 25px;
+        cursor: pointer;
+    }
+    .menu img,
+    .close img {
+        width: 100%;
+    }
+    #chart-pop {
+        width:520px;
+        height: auto;
+    }
+}
+
+@media (max-width: 649px) {
+    #MemberImgbox_img {
+        width: 105px;
+        height: 105px;
+    }
+    #Imgicon {
+        width: 30px;
+        height: 30px;
+        margin-right: 0px;
+    }
+    #Member {
+        height: 110px;
+    }
+    #MemberImage {
+        width: 25%;
+        margin-right: 50px;
+    }
+    #MemberText {
+        width: 55%;
+    }
+    #History_Title {
+        height: 40px;
+    }
+    #History_Title_Text {
+        font-size: 16px;
+        height: 40px;
+    }
+    #MemberText {
+        width: 50%;
+        font-size: 14px;
+    }
+    #search {
+        margin: 15px 0;
+    }
+    #chart-pop {
+        width:480px;
+        height: auto;
+    }
+    
+}
+@media (max-width: 576px) {
+    #window-pop {
+        width: 240px;
+        height: 240px;
+    }
+    #window_Title {
+        width: 240px;
+        font-size: 16px;
+    }
+    .oldpassword {
+        width: 240px;
+        height: 30px;
+    }
+    #newpassword {
+        width: 240px;
+        height: 30px;
+    }
+    #checknewpassword {
+        width: 240px;
+        height: 30px;
+    }
+    #window-pop input {
+        width: 220px;
+        height: 30px;
+        font-size: 12px;
+    }
+    #password_button {
+        width: 240px;
+        height: 30px;
+    }
+    #password_button button {
+        font-size: 14px;
+    }
+    #Delete-pop {
+        width: 250px;
+        height: 100px;
+        padding: 20px 25px;
+    }
+    #Delete_Title {
+        font-size: 16px;
+    }
+    #Delete_true {
+        width: 65px;
+        height: 25px;
+        font-size: 14px;
+    }
+    #Delete_false {
+        width: 65px;
+        height: 25px;
+        font-size: 14px;
+    }
+    #Message-pop {
+        width: 250px;
+        height: 100px;
+        padding: 20px 25px;
+    }
+    #Message_Title {
+        font-size: 16px;
+    }
+    #Message_true {
+        width: 65px;
+        height: 25px;
+        font-size: 14px;
+    }
+    header {
+        height: 50px;
+    }
+    .logo {
+        width: 110px;
+    }
+    .content {
+        margin-top: 50px;
+    }
+    .home_page {
+        height: 320px;
+    }
+    .detection_feedback,
+    .right_side {
+        display: none;
+    }
+    .select {
+        display: flex;
+    }
+    .menu {
+        display: flex;
+        width: 25px;
+        cursor: pointer;
+    }
+    .close {
+        display: none;
+        width: 25px;
+        cursor: pointer;
+    }
+    .menu img,
+    .close img {
+        width: 100%;
+    }
+    .table {
+        line-height: 24px;
+    }
+    #search_select {
+        height: 25px;
+    }
+    #chart_button{
+        height: 25px;
+    }
+    #search {
+        margin: 5px 0;
+    }
+    #chart-pop {
+        width:420px;
+        height: auto;
+    }
+}
+
+@media (max-width: 516px) {
+    #Member {
+        height: 100px;
+        margin-bottom: 20px;
+    }
+    .table {
+        line-height: 24px;
+    }
+    #MemberImage {
+        width: 30%;
+        margin-right: 40px;
+    }
+    #MemberText {
+        width: 60%;
+        font-size: 12px;
+    }
+    #MemberImgbox_img {
+        width: 95px;
+        height: 95px;
+    }
+    #Imgicon {
+        width: 25px;
+        height: 25px;
+        margin-right: 0px;
+    }
+    #History_Title {
+        height: 30px;
+    }
+    #History_Title_Text {
+        font-size: 14px;
+        height: 30px;
+    }
+    #StartDateSort_Down {
+        height: 20px;
+        width: 20px;
+        margin-left: 2px;
+    }
+    #EndDateSort_Down {
+        height: 20px;
+        width: 20px;
+        margin-left: 2px;
+    }
+    #BadSort_Down {
+        height: 20px;
+        width: 20px;
+        margin-left: 2px;
+    }
+    #StartDateSort_Up {
+        height: 20px;
+        width: 20px;
+        margin-left: 2px;
+    }
+    #EndDateSort_Up {
+        height: 20px;
+        width: 20px;
+        margin-left: 2px;
+    }
+    #BadSort_Up {
+        height: 20px;
+        width: 20px;
+        margin-left: 2px;
+    }
+    #chart-pop {
+        width:90%;
+        height: auto;
+    }
+}
+@media (max-width:426px) {
+    .logo {
+        width: 104px;
+    }
+}
+
+
+@media (max-width: 420px) {
+    #History_Title_Text {
+        font-size: 12px;
+        height: 30px;
+    }
+}
+
+@media (max-width:375px) {
+    #Delete-pop {
+        width: 200px;
+        height: 80px;
+        border-radius: 2px;
+    }
+    #Delete_Title {
+        font-size: 14px;
+    }
+    #Delete_true {
+        width: 60px;
+        height: 20px;
+        font-size: 12px;
+        border-radius: 2px;
+        letter-spacing: 0px;
+    }
+    #Delete_false {
+        width: 60px;
+        height: 20px;
+        font-size: 12px;
+        border-radius: 2px;
+        letter-spacing: 0px;
+    }
+    #Message-pop {
+        width: 200px;
+        height: 80px;
+        border-radius: 2px;
+    }
+    #Message_Title {
+        font-size: 14px;
+    }
+    #Message_true {
+        width: 60px;
+        height: 20px;
+        font-size: 12px;
+        border-radius: 2px;
+        letter-spacing: 0px;
+    }
+    /*start*/
+    header {
+        height: 50px;
+    }
+    .logo {
+        width: 110px;
+    }
+    .content {
+        margin-top: 50px;
+    }
+    .home_page {
+        height: 300px;
+    }
+    #desktop {
+        height: 200px;
+    }
+    /*end*/
+}

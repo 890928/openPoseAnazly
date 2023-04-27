@@ -1,0 +1,1182 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 16px;
+
+}
+.wrapper{
+    width: 100%;
+    height: 100vh;
+    overflow: auto;
+}
+.wrapper::-webkit-scrollbar {
+    width: 4px;
+}
+
+.wrapper::-webkit-scrollbar-thumb{
+    background-color: #d7d7d7;
+    border-radius: 10px;
+    height: 4px;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 60px;
+    z-index: 5;
+    letter-spacing: 5px;
+    background-color: #3A445D;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    height: 100%;
+}
+
+.left_side {
+    display: flex;
+    width: 70%;
+    height: 55px;
+}
+
+.logo {
+    width: 150px;
+    height: 50px;
+    margin-top: 2px;
+    cursor: pointer;
+}
+
+.logo img {
+    width: 100%;
+    height: 100%;
+}
+
+.detection_feedback {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 85%;
+    height: 55px;
+    padding-left: 60px;
+    font-size: 18px;
+    color: #f7f7f7;
+}
+
+.detection_feedback p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 140px;
+    height: 100%;
+    cursor: pointer;
+}
+
+#feedback {
+    font-weight: 600;
+    height: 60px;
+    background-color: #48567b;
+}
+
+nav p:hover {
+    font-weight: 600;
+    font-size: 20px;
+    color: white;
+}
+
+.right_side {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    width: 30%;
+    height: 55px;
+}
+
+.right_side p {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.select {
+    display: none;
+}
+
+.menu {
+    display: none;
+}
+
+.right_side p {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 75px;
+    height: 100%;
+    margin-left: 15px;
+    font-size: 18px;
+    cursor: pointer;
+    color: #f7f7f7;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    margin-top: 60px;
+    overflow: auto;
+}
+content::-webkit-scrollbar {
+    width: 4px;
+}
+
+content::-webkit-scrollbar-thumb{
+    background-color: #d7d7d7;
+    border-radius: 10px;
+    height: 4px;
+}
+.home_page {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 620px;
+}
+
+.user_information {
+    display: flex;
+    align-items: center;
+    width: 150px;
+    height: 100%;
+    margin-right: 15px;
+    cursor: pointer;
+}
+
+.user_name {
+    font-size: 16px;
+    letter-spacing: 2px;
+    margin-left: 10px;
+    color: white;
+}
+
+.photo {
+    display: flex;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.photo img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.other {
+    display: flex;
+    align-items: center;
+    width: 15px;
+    cursor: pointer;
+}
+
+.other img {
+    width: 100%;
+}
+
+ul {
+    position: absolute;
+    display: none;
+    color: black;
+    top: 50px;
+    right: 0;
+    width: 140px;
+    list-style: none;
+    background-color: #3A445D;
+}
+
+li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    color: white;
+    font-size: 16px;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+    color: black;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 17.5px;
+    left: -100px;
+    width: 140px;
+    height: 60px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    padding: 20px 0;
+    background-color: #3A445D;
+}
+
+.dropdown-content span {
+    display: flex;
+    align-items: center;
+    width: 125px;
+    height: 40px;
+    font-size: 18px;
+    cursor: pointer;
+    color: #f7f7f7;
+    text-decoration: none;
+    padding-left: 15px;
+}
+
+.dropdown-content span:hover,
+li:hover {
+    background-color: #57668c;
+}
+
+.dropdown:hover .dropdown-content,
+.dropdown:active .dropdown-content,
+.select:hover .list_content,
+.select:active .list_content {
+    display: block;
+}
+
+content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-top: 60px;
+}
+
+#Feedback_Insert {
+    width: 60%;
+    margin-top: 50px;
+}
+
+.FI_Title {
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+.FI_Score {
+    display: flex;
+    align-items: center;
+    font-size: 32px;
+    padding-left: 15px;
+    margin-bottom: 20px;
+}
+
+.FI_Star {
+    width: 40px;
+    margin-right: 5px;
+    cursor: pointer;
+    object-fit: cover;
+}
+
+#FI_TextAndButton {
+    display: flex;
+    flex-direction: row;
+}
+
+.FI_TextBox {
+    width: calc(100% - 90px);
+    height: 120px;
+    border-radius: 10px;
+    background-color: rgb(240, 240, 240);
+    padding: 10px 20px;
+}
+
+#FI_textarea {
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    color: rgb(100, 100, 100);
+    background-color: rgb(240, 240, 240);
+    font-size: 20px;
+    resize: none;
+}
+
+#FI_Button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: flex-end;
+    color: white;
+    cursor: pointer;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 20px;
+    letter-spacing: 1px;
+    margin-left: 10px;
+    width: 80px;
+    height: 45px;
+    background-color: rgb(49, 131, 207);
+}
+
+.FI_Reply {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(240, 240, 240);
+    margin-top: 20px;
+    padding: 20px 25px;
+    font-size: 16px;
+    border-radius: 10px;
+    color: rgb(100, 100, 100);
+}
+
+.FI_ErrorMessage {
+    font-size: 20px;
+    height: 50px;
+    width: 100%;
+    padding-left: 15px;
+    margin-top: 20px;
+    font-weight: bold;
+    color: white;
+    background-color: red;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+}
+
+#Feedback_Line {
+    width: 60%;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    border-color: 1px rgb(100, 100, 100);
+}
+
+
+/*檢視*/
+
+#Feedback_View {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+}
+
+.FV_Box {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(240, 240, 240);
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.Box_main {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.Box_AccountHidden {
+    display: none;
+}
+
+.Box_Title {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.BoxT_left {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.BoxTl_Photo {
+    width: 5vh;
+    height: 5vh;
+}
+
+.BoxTl_Photo img {
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+    object-fit: cover;
+}
+
+.BoxTl_Name {
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+    margin-left: 15px;
+}
+
+.BoxT_right {
+    display: flex;
+    flex-direction: row;
+    margin-left: auto;
+}
+
+.BoxTrA {
+    display: flex;
+    flex-direction: column;
+}
+
+.BoxTrA_Score {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+}
+
+.BoxTrA_Score img {
+    width: 120px;
+    object-fit: cover;
+}
+
+.BoxTrA_CreateTime {
+    display: flex;
+    justify-content: flex-end;
+    font-size: 20px;
+    padding-right: 10px;
+    color: rgb(100, 100, 100);
+}
+
+.BoxTr_Button {
+    /*display: flex;*/
+    display: none;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+}
+
+.BoxTr_Button img {
+    width: 50%;
+    cursor: pointer;
+}
+
+.Box_Content {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    margin-top: 20px;
+    padding: 0 5px;
+    color: rgb(100, 100, 100);
+}
+
+.Box_Reply {
+    /*display: flex;*/
+    display: none;
+    flex-direction: column;
+}
+
+.BoxR_Line {
+    margin: 20px auto;
+    width: 99%;
+    border-color: 1px rgb(100, 100, 100);
+}
+
+.BoxRB {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.BoxRB_Man {
+    width: 80px;
+    display: flex;
+    flex-wrap: nowrap;
+    font-size: 18px;
+    color: black;
+    padding-left: 5px;
+}
+
+.BoxRB_Text {
+    width: calc(100% - 80px);
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    color: rgb(100, 100, 100);
+    padding-right: 5px;
+}
+
+.BoxRI_Textarea {
+    display: none;
+    width: calc(100% - 170px);
+    height: 100%;
+    border: none;
+    outline: none;
+    resize: none;
+    color: rgb(100, 100, 100);
+    background-color: white;
+    font-size: 20px;
+}
+
+.BoxRI_Button {
+    /*display: flex;*/
+    display: none;
+    justify-content: center;
+    align-items: center;
+    align-self: flex-end;
+    color: white;
+    cursor: pointer;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 20px;
+    letter-spacing: 1px;
+    margin-left: 10px;
+    width: 80px;
+    height: 45px;
+    background-color: rgb(49, 131, 207);
+}
+
+#showmore {
+    font-size: 20px;
+    cursor: pointer;
+    color: rgb(49, 131, 207);
+    display: flex;
+    justify-self: center;
+    align-self: center;
+    margin-bottom: 50px;
+}
+
+#dialog_wrapper {
+    position: fixed;
+    z-index: 6;
+    display: none;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+dialog {
+    display: none;
+    flex-direction: column;
+    position: fixed;
+    top: 15%;
+    left: auto;
+    right: auto;
+    width: 400px;
+    height: 120px;
+    border: none;
+    box-shadow: 0 2px 6px rgb(91, 91, 91);
+    border-radius: 5px;
+    padding: 30px 50px;
+    z-index: 7;
+}
+
+.dialog_content {
+    width: 100%;
+    font-size: 20px;
+}
+
+dialog button {
+    width: 80px;
+    height: 40px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    margin: auto 0px 0px auto;
+    cursor: pointer;
+    font-weight: bold;
+    background-color: rgb(19, 117, 253);
+    font-size: 20px;
+    letter-spacing: 1px;
+}
+
+
+@media screen and (max-width: 992px) {
+    .detection_feedback {
+        margin-left: -20px;
+    }
+    .detection_feedback p {
+        width: 120px;
+    }
+    .right_side p {
+        width: 60px;
+    }
+    #Feedback_Insert {
+        width: 80%;
+    }
+    #Feedback_Line {
+        width: 79%;
+        margin-top: 30px;
+        margin-bottom: 30px;
+        border-color: 1px rgb(100, 100, 100);
+    }
+    /*檢視*/
+    #Feedback_View {
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+    }
+    dialog {
+        top: 10%;
+        width: 300px;
+        padding: 30px 40px;
+    }
+    dialog button {
+        width: 70px;
+        height: 30px;
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 961px) {
+    .detection_feedback {
+        margin-left: -15px;
+    }
+}
+
+@media (max-width:871px) {
+    /*start*/
+    .logo {
+        height: 45px;
+        margin-top: 5px;
+    }
+    .left_side {
+        width: 55%;
+    }
+}
+
+@media (max-width:831px) {
+    /*start*/
+    .logo {
+        height: 38px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    nav {
+        display: flex;
+        justify-content: space-between;
+        width: 95%;
+    }
+    .detection_feedback {
+        padding-left: 40px;
+    }
+    .detection_feedback p {
+        width: 110px;
+        font-size: 16px;
+    }
+    .right_side {
+        width: 18%;
+    }
+    .right_side p {
+        width: 90px;
+        font-size: 16px;
+    }
+    .detection_feedback p:hover,
+    .right_side p:hover {
+        font-size: 18px;
+        color: white;
+    }
+    #Feedback_Insert {
+        width: 80%;
+        margin-top: 50px;
+    }
+    .FI_Title {
+        font-size: 32px;
+        margin-bottom: 10px;
+    }
+    .FI_Score {
+        font-size: 28px;
+        padding-left: 10px;
+        margin-bottom: 15px;
+    }
+    .FI_Star {
+        width: 30px;
+        margin-right: 5px;
+    }
+    .FI_TextBox {
+        width: calc(100% - 85px);
+        height: 100px;
+        border-radius: 8px;
+        padding: 8px 16px;
+    }
+    #FI_textarea {
+        font-size: 18px;
+    }
+    #FI_Button {
+        border-radius: 8px;
+        font-size: 18px;
+        letter-spacing: 1px;
+        margin-left: 10px;
+        width: 75px;
+        height: 40px;
+    }
+    .FI_Reply {
+        width: 100%;
+        margin-top: 20px;
+        padding: 20px 25px;
+        font-size: 14px;
+        border-radius: 10px;
+    }
+    .FI_ErrorMessage {
+        font-size: 16px;
+        height: 40px;
+        width: 100%;
+        padding-left: 10px;
+        margin-top: 15px;
+        border-radius: 4px;
+    }
+    #Feedback_Line {
+        width: 79%;
+        margin-top: 25px;
+        margin-bottom: 25px;
+    }
+    /*檢視*/
+    #Feedback_View {
+        width: 80%;
+    }
+    .FV_Box {
+        padding: 18px;
+        margin-bottom: 18px;
+    }
+    .BoxTl_Photo {
+        width: 5vh;
+        height: 5vh;
+    }
+    .BoxTl_Photo img {
+        width: 100%;
+        border-radius: 100%;
+        object-fit: cover;
+    }
+    .BoxTl_Name {
+        font-size: 20px;
+        margin-left: 12px;
+    }
+    .BoxTrA_Score img {
+        width: 100px;
+        object-fit: cover;
+    }
+    .BoxTrA_CreateTime {
+        font-size: 18px;
+        padding-right: 8px;
+    }
+    .BoxTr_Button {
+        width: 40px;
+        height: 40px;
+    }
+    .BoxTr_Button img {
+        width: 50%;
+    }
+    .Box_Content {
+        font-size: 14px;
+        margin-top: 15px;
+        padding: 0 5px;
+    }
+    .BoxR_Line {
+        margin: 15px auto;
+        width: 99%;
+    }
+    .BoxRB_Man {
+        width: 75px;
+        font-size: 16px;
+        padding-left: 5px;
+    }
+    .BoxRB_Text {
+        width: calc(100% - 75px);
+        font-size: 14px;
+        padding-right: 5px;
+    }
+    .BoxRI_Textarea {
+        width: calc(100% - 160px);
+        height: 100%;
+        font-size: 20px;
+    }
+    .BoxRI_Button {
+        border-radius: 10px;
+        font-size: 18px;
+        letter-spacing: 1px;
+        margin-left: 10px;
+        width: 75px;
+        height: 45px;
+    }
+    #showmore {
+        font-size: 20px;
+        margin-bottom: 50px;
+    }
+}
+
+@media (max-width:667px) {
+    /*start*/
+    .logo {
+        width: 104px;
+    }
+    .detection_feedback,
+    .right_side {
+        display: none;
+    }
+    .select {
+        display: flex;
+    }
+    .menu {
+        display: flex;
+        width: 25px;
+        cursor: pointer;
+    }
+    .close {
+        display: none;
+        width: 25px;
+        cursor: pointer;
+    }
+    .menu img,
+    .close img {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    header {
+        height: 50px;
+    }
+    .logo {
+        width: 110px;
+    }
+    .content {
+        margin-top: 50px;
+    }
+    .home_page {
+        height: 320px;
+    }
+    #desktop {
+        height: 220px;
+    }
+    .detection_feedback,
+    .right_side {
+        display: none;
+    }
+    .select {
+        display: flex;
+    }
+    .menu {
+        display: flex;
+        width: 25px;
+        cursor: pointer;
+    }
+    .close {
+        display: none;
+        width: 25px;
+        cursor: pointer;
+    }
+    .menu img,
+    .close img {
+        width: 100%;
+    }
+    #Feedback_Insert {
+        width: 80%;
+        margin-top: 50px;
+    }
+    .FI_Title {
+        font-size: 28px;
+        margin-bottom: 8px;
+    }
+    .FI_Score {
+        font-size: 24px;
+        padding-left: 8px;
+        margin-bottom: 12px;
+    }
+    .FI_Star {
+        width: 25px;
+        margin-right: 5px;
+    }
+    .FI_TextBox {
+        width: calc(100% - 80px);
+        height: 100px;
+        border-radius: 8px;
+        padding: 8px 16px;
+    }
+    #FI_textarea {
+        font-size: 16px;
+    }
+    #FI_Button {
+        border-radius: 6px;
+        font-size: 16px;
+        letter-spacing: 1px;
+        margin-left: 10px;
+        width: 70px;
+        height: 35px;
+    }
+    .FI_Reply {
+        width: 100%;
+        margin-top: 15px;
+        padding: 15px 20px;
+        font-size: 12px;
+        border-radius: 8px;
+    }
+    .FI_ErrorMessage {
+        font-size: 14px;
+        height: 35px;
+        width: 100%;
+        padding-left: 8px;
+        margin-top: 12px;
+        border-radius: 4px;
+    }
+    #Feedback_Line {
+        width: 79%;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    /*檢視*/
+    #Feedback_View {
+        width: 80%;
+    }
+    .FV_Box {
+        padding: 15px;
+        margin-bottom: 15px;
+    }
+    .BoxTl_Photo {
+        display: none;
+        width: 5vh;
+        height: 5vh;
+    }
+    .BoxTl_Photo img {
+        width: 100%;
+        border-radius: 100%;
+        object-fit: cover;
+    }
+    .BoxTl_Name {
+        font-size: 16px;
+        margin-left: 10px;
+    }
+    .BoxTrA_Score img {
+        width: 80px;
+        object-fit: cover;
+    }
+    .BoxTrA_CreateTime {
+        font-size: 16px;
+        padding-right: 6px;
+    }
+    .BoxTr_Button {
+        width: 35px;
+        height: 35px;
+    }
+    .BoxTr_Button img {
+        width: 50%;
+    }
+    .Box_Content {
+        font-size: 12px;
+        margin-top: 12px;
+        padding: 0 5px;
+    }
+    .BoxR_Line {
+        margin: 10px auto;
+        width: 99%;
+    }
+    .BoxRB_Man {
+        width: 70px;
+        font-size: 14px;
+        padding-left: 5px;
+    }
+    .BoxRB_Text {
+        width: calc(100% - 70px);
+        font-size: 12px;
+        padding-right: 5px;
+    }
+    .BoxRI_Textarea {
+        width: calc(100% - 160px);
+        height: 100%;
+        font-size: 20px;
+    }
+    .BoxRI_Button {
+        border-radius: 8px;
+        font-size: 16px;
+        letter-spacing: 1px;
+        margin-left: 8px;
+        width: 70px;
+        height: 40px;
+    }
+    #showmore {
+        font-size: 16px;
+        margin-bottom: 5ㄋ0px;
+    }
+    dialog {
+        top: 10%;
+        width: 250px;
+        height: 100px;
+        padding: 20px 25px;
+    }
+    .dialog_content {
+        font-size: 16px;
+    }
+    dialog button {
+        width: 65px;
+        height: 25px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width:426px) {
+    .logo {
+        width: 104px;
+    }
+}
+
+@media screen and (max-width:375px) {
+    header {
+        height: 50px;
+    }
+    .logo {
+        width: 104px;
+    }
+    #Feedback_Insert {
+        width: 80%;
+        margin-top: 50px;
+    }
+    .FI_Title {
+        font-size: 28px;
+        margin-bottom: 8px;
+    }
+    .FI_Score {
+        font-size: 24px;
+        padding-left: 8px;
+        margin-bottom: 12px;
+    }
+    .FI_Star {
+        width: 25px;
+        margin-right: 5px;
+    }
+    .FI_TextBox {
+        width: calc(100% - 80px);
+        height: 80px;
+        border-radius: 8px;
+        padding: 8px 16px;
+    }
+    #FI_textarea {
+        font-size: 16px;
+    }
+    #FI_Button {
+        border-radius: 6px;
+        font-size: 16px;
+        letter-spacing: 1px;
+        margin-left: 10px;
+        width: 70px;
+        height: 35px;
+    }
+    .FI_Reply {
+        width: 100%;
+        margin-top: 15px;
+        padding: 15px 20px;
+        font-size: 12px;
+        border-radius: 8px;
+    }
+    .FI_ErrorMessage {
+        font-size: 14px;
+        height: 35px;
+        width: 100%;
+        padding-left: 8px;
+        margin-top: 12px;
+        border-radius: 4px;
+    }
+    #Feedback_Line {
+        width: 79%;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    /*檢視*/
+    #Feedback_View {
+        width: 80%;
+    }
+    .FV_Box {
+        padding: 15px;
+        margin-bottom: 15px;
+    }
+    .BoxTl_Photo {
+        display: none;
+        width: 5vh;
+        height: 5vh;
+    }
+    .BoxTl_Photo img {
+        width: 100%;
+        border-radius: 100%;
+        object-fit: cover;
+    }
+    .BoxTl_Name {
+        font-size: 16px;
+        margin-left: 10px;
+    }
+    .BoxTrA_Score img {
+        width: 80px;
+        object-fit: cover;
+    }
+    .BoxTrA_CreateTime {
+        font-size: 16px;
+        padding-right: 6px;
+    }
+    .BoxTr_Button {
+        width: 35px;
+        height: 35px;
+    }
+    .BoxTr_Button img {
+        width: 50%;
+    }
+    .Box_Content {
+        font-size: 12px;
+        margin-top: 12px;
+        padding: 0 5px;
+    }
+    .BoxR_Line {
+        margin: 10px auto;
+        width: 99%;
+    }
+    .BoxRB_Man {
+        width: 70px;
+        font-size: 14px;
+        padding-left: 5px;
+    }
+    .BoxRB_Text {
+        width: calc(100% - 70px);
+        font-size: 12px;
+        padding-right: 5px;
+    }
+    .BoxRI_Textarea {
+        width: calc(100% - 160px);
+        height: 100%;
+        font-size: 20px;
+    }
+    .BoxRI_Button {
+        border-radius: 8px;
+        font-size: 16px;
+        letter-spacing: 1px;
+        margin-left: 8px;
+        width: 70px;
+        height: 40px;
+    }
+    #showmore {
+        font-size: 16px;
+        margin-bottom: 50px;
+    }
+    dialog {
+        top: 10%;
+        width: 200px;
+        height: 80px;
+        padding: 10px 15px;
+        border-radius: 2px;
+    }
+    .dialog_content {
+        font-size: 14px;
+    }
+    dialog button {
+        width: 60px;
+        height: 20px;
+        font-size: 12px;
+        border-radius: 2px;
+        letter-spacing: 0px;
+    }
+}

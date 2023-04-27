@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>坐姿檢測</title>
+    <link rel="stylesheet" type="text/css" href="./css/Feedback.css">
+</head>
+
+<body>
+    <div id="dialog_wrapper"></div>
+    <dialog></dialog>
+    <header>
+        <nav>
+            <div class="left_side">
+                <div class="logo" id="logo">
+                    <img src="Image/logo.png">
+                </div>
+                <div class="detection_feedback" id="detection_feedback">
+                    <p id="detection">坐姿檢測</p>
+                    <p id="feedback">系統回饋</p>
+                </div>
+            </div>
+            <div class="right_side" id="right_side">
+                <p id="login">登入</p>
+                <p id="register">註冊</p>
+            </div>
+            <div class="select">
+                <div class="menu" id="menu">
+                    <img src="Image/menu.png">
+                </div>
+                <div class="close" id="close">
+                    <img src="Image/close.png">
+                </div>
+                <ul class="list" id="list">
+                    <li id="list_detection">坐姿檢測</li>
+                    <li id="list_feedback">系統回饋</li>
+                    <li id="list_login">登入</li>
+                    <li id="list_register">註冊</li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+   <div class="wrapper">
+    <content>
+        <div id="Feedback_Insert">
+            <div id="Insert_box">
+                <div class="FI_Title">
+                    留下你的評分與回饋
+                </div>
+                <div class="FI_Score">
+                    評分：
+                    <img src="./Image/Feedback_Star.png" class="FI_Star" Id="FI_Star1">
+                    <img src="./Image/Feedback_Star.png" class="FI_Star" Id="FI_Star2">
+                    <img src="./Image/Feedback_Star.png" class="FI_Star" Id="FI_Star3">
+                    <img src="./Image/Feedback_Star.png" class="FI_Star" Id="FI_Star4">
+                    <img src="./Image/Feedback_Star.png" class="FI_Star" Id="FI_Star5">
+                </div>
+                <div id="FI_TextAndButton">
+                    <div class="FI_TextBox">
+                        <textarea id="FI_textarea">留下您的使用回饋或問題(非必填)</textarea>
+                    </div>
+                    <div id="FI_Button">送出</div>
+                </div>
+                <div id="FI_ErrorMessage"></div>
+            </div>
+        </div>
+        <hr id="Feedback_Line"></hr>
+        <div id="Feedback_View">
+            <!--
+            <div class="FV_Box">
+                <div class="Box_main">
+                    <div class='Box_AccountHidden'></div>
+                    <div class="Box_Title">
+                        <div class="BoxT_left">
+                            <div class="BoxTl_Photo">
+                                <img src='./Image/defult.jpg'>
+                            </div>
+                            <div class="BoxTl_Name">Name</div>
+                        </div>
+                        <div class=BoxT_right>
+                            <div class="BoxTrA">
+                                <div class='BoxTrA_Score'>
+                                    <img src='./Image/Feedback_5Star.png'>
+                                </div>
+                                <div class='BoxTrA_CreateTime'>
+                                    CreateTime
+                                </div>
+                            </div>
+                            <div class="BoxTr_Button">
+                                <img src="./Image/Feedback_edit.png">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="Box_Content">
+                        Content
+                    </div>
+                </div>
+                <div class="Box_Reply">
+                    <hr class="BoxR_Line"></hr>
+                    <div class="BoxRB">
+                        <div class="BoxRB_Man">管理員：</div>
+                        <div class="BoxRB_Text">Reply</div>
+                        <div class="BoxRI_Textarea">Reply</div>
+                        <div class="BoxRI_Button">回覆</div>
+                    </div>
+                </div>
+            </div>
+            -->
+        </div>
+    </content>
+   </div>
+    <script src="./js/Feedback.js" type="text/javascript"></script>
+</body>
+
+</html>

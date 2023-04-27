@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link type="text/css" rel="styleSheet" href="./css/History.css" />
+    <title>歷程記錄</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js" integrity="sha512-d9xgZrVZpmmQlfonhQUvTR7lMPtO7NkZMkA0ABN3PHCbKA5nqylQ/yWlFAyY6hYgdF1Qh6nYiuADWwKB4C2WSw==" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="wrapper">
+        <header>
+            <nav>
+                <div class="left_side">
+                    <div class="logo" id="logo">
+                        <img src="Image/logo.png">
+                    </div>
+                    <div class="detection_feedback" id="detection_feedback">
+                        <p id="detection">坐姿檢測</p>
+                        <p id="feedback">系統回饋</p>
+                    </div>
+                </div>
+                <div class="right_side" id="right_side">
+                    <p id="login">登入</p>
+                    <p id="register">註冊</p>
+                </div>
+                <div class="select">
+                    <div class="menu" id="menu">
+                        <img src="Image/menu.png">
+                    </div>
+                    <div class="close" id="close">
+                        <img src="Image/close.png">
+                    </div>
+                    <ul class="list" id="list">
+                        <li id="list_detection">坐姿檢測</li>
+                        <li id="list_feedback">系統回饋</li>
+                        <li id="list_login">登入</li>
+                        <li id="list_register">註冊</li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <div id="content">
+            <div id="Member">
+                <div id="MemberImage">
+                </div>
+                <div id="MemberText">
+                    <div id="Member_Name">
+                    </div>
+                    <div id="Member_Account">
+                    </div>
+                    <div class =Member_button>
+                        <button onclick="customizeWindowEvent()">修改密碼</button>
+                        <button onclick="DeleteMember()">刪除帳號</button>
+                    </div>
+                </div>
+            </div>
+            <div id="History_Title">
+                <div id="History_Title_Text">
+                    歷程記錄
+                </div>
+            </div>
+            <div id="chart">
+            </div>
+            <div id="search">
+                <div id="datechoice">
+                    <div id="datatitle">
+                      <div id="start_text">
+                          開始時間
+                      </div>
+                      <div id="end_text">
+                          結束時間
+                      </div>
+                    </div>
+                    <div id="datacontent">
+                        <div class="date_start">
+                            <input id="date_start" type="date" >
+                            <input id="time_start" type="time" id="time_start" value="00:00">
+                        </div>
+                        <div class="date_end">
+                            <input id="date_end" type="date">
+                            <input id="time_end" type="time" id="time_end" value="00:00">
+                        </div>
+                    </div>
+                </div>
+                <div id="choice">
+                    <div id="title_space"> </div>
+                    <div id="choice_content">
+                        <button id="search_select">篩選</button>
+                        <button id="chart_button" onclick="OpenChart()">歷程分析圖表</button>
+                    </div>
+                </div>
+            </div>
+            <div class="table">
+                <table id="table_content">
+                </table>
+            </div>
+            <div id="HistoryBottom">
+                <div id="pageImgL">
+                    <img src="./Image/PoseHistory_next_Left.png" id="pageImgL_img">
+                </div>
+                <div id="page">
+                </div>
+                <div id="pageImgR">
+                    <img src="./Image/PoseHistory_next_right.png" id="pageImgR_img">
+                </div>
+            </div>
+            <div id="NowPageHidden">
+            </div>
+            <div id="MaxPageHidden">
+            </div>  
+            <div id="BadSortHidden">
+            </div>
+            <div id="StartTimeHidden">
+            </div>
+            <div id="EndTimeHidden">
+            </div>
+            <input name="file" id="Userfile" type="file" accept="image/*">
+            <div id="window-container">
+                <div id="window-pop">
+                    <div class="window-content">
+                        <div id="window_Title">
+                            <span>修改密碼</span>
+                        </div>
+                        <div class="oldpassword">
+                            <input type="password" id="old" placeholder="舊密碼">
+                        </div>
+                        <div id="newpassword">
+                            <input type="password" id="new" placeholder="新密碼">
+                        </div>
+                        <div id="checknewpassword">
+                            <input type="password" id="checknew" placeholder="確認新密碼">
+                        </div>
+                        <div id="password_button">
+                            <button onclick="changepassword()">修改密碼</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="Delete-container">
+                <div id="Delete-pop">
+                    <div id="Delete-content">
+                        <div id="Delete_Title">確定要刪除帳號嗎</div>
+                        <div id="Delete_button">
+                            <button id="Delete_true">確定</button>
+                            <button id="Delete_false">取消</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="chart-container">
+                <div id="chart-pop">
+                    <div id="chart-content">
+                        <canvas id="myChart"></canvas>
+                    </div>
+                </div>
+            </div>
+            <div id="Message-container">
+                <div id="Message-pop">
+                    <div id="Message-content">
+                        <div id="Message_Title"></div>
+                            <button id="Message_true">確定</button>
+                        </div>
+                    </div>
+                </div>
+            </div>  
+        </div>
+        <dialog></dialog>
+        <script src="./js/History.js"></script>
+    </div>
+</body>
+
+</html>
